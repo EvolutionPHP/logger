@@ -1,6 +1,4 @@
 <?php
-error_reporting(-1);
-ini_set('display_errors', 1);
 include __DIR__.DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR.'autoload.php';
 $config = array();
 /*
@@ -66,7 +64,7 @@ $config['level'] = 1;
 $config['date_format'] = 'Y-m-d H:i:s';
 
 
-$logger = \EvolutionPHP\Logger\Log::init($config);
+$logger = new \EvolutionPHP\Logger\Log($config);
 
 $logger->write_log('error','This is an error message.');
 $logger->write_log('debug','This is a debug message.');

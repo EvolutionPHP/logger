@@ -1,6 +1,6 @@
 {
   "name": "evolutionphp/logger",
-  "description": "Simple PHP logger, save logs in files.",
+  "description": "Simple PHP logger based in the logger of CodeIgniter 3.",
   "license": "MIT",
   "type": "library",
   "keywords": [

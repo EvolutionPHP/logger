@@ -148,7 +148,7 @@ class Log {
 		return TRUE;
 	}
 
-	static function init($data='')
+	static function instance($data='')
 	{
 		if(!self::$instance)
 		{
