@@ -92,16 +92,18 @@ class Log {
 		{
 			$this->_enabled = FALSE;
 		}
+		if(isset($data['level'])){
+			if (is_numeric($data['level']))
+			{
+				$this->_level = (int) $data['level'];
+			}
+			elseif (is_array($data['level']))
+			{
+				$this->_level = 0;
+				$this->_level_array = array_flip($data['level']);
+			}
+		}
 
-		if (is_numeric($data['level']))
-		{
-			$this->_level = (int) $data['level'];
-		}
-		elseif (is_array($data['level']))
-		{
-			$this->_level = 0;
-			$this->_level_array = array_flip($data['level']);
-		}
 
 		if ( ! empty($data['date_format']))
 		{
